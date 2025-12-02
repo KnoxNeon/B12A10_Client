@@ -39,7 +39,7 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink className="flex lg:pl-4">
-            <img className="h-16 w-16 hover:scale-120"  src="./logo.png" alt="" />
+            <img className="h-16 w-16 hover:scale-120"  src="./logo_white.png" alt="" />
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
