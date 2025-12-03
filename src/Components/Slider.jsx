@@ -1,12 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-
-// import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
 
 const Slider = () => {
@@ -41,7 +38,7 @@ const Slider = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute z-10 px-4 lg:px-8 pt-30 lg:py-40 text-white">
-            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Find Your <br /> Furry Friend Today!</div>
+            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Find Your <br /> Furry Friend Today!"</div>
           </div>
         </SwiperSlide>
 
@@ -67,8 +64,7 @@ const Slider = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute z-10 px-4 lg:px-8 pt-30 lg:py-40 text-white">
-            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Because Every Pet <br />— Deserves Love and Care.”
-</div>
+            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Because Every Pet <br />— Deserves Love and Care.”</div>
           </div>
         </SwiperSlide>
       </Swiper>
