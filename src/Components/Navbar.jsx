@@ -1,8 +1,17 @@
 
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
+import { signOut } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext)
+
+  const handleSignOut = () =>{
+    signOut(auth)
+  }
   
   return (
     <div>
@@ -56,12 +65,29 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end ">
-          
+          {user && (
             <div className='flex gap-2'>
-              <Link to="/profile"><img className='w-10 h-10 rounded-4xl border-2 border-sky-700 hover:scale-110'  alt="" /></Link>
-              <button  className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 bg-sky-700 text-white "> Logout</button>
+              <Link to="/profile"><img className='w-10 h-10 rounded-4xl border-2 border-sky-500 hover:scale-110' src={user.photoURL} alt="" /></Link>
+              <button onClick={handleSignOut} className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 text-white bg-sky-500"> Logout</button>
             </div>
-        
+          )}
+
+          {!user && (
+            <div className='space-x-2'>
+              <Link
+                to="/login"
+                className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-sky-500"
+              >
+                 Login
+              </Link>
+              <Link
+                to="/register"
+                className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-sky-500"
+              >
+                 Register
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
