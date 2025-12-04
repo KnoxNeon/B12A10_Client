@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Parallax, Pagination, Navigation } from 'swiper/modules';
+import { Parallax, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const Slider = () => {
   return (
@@ -15,12 +15,16 @@ const Slider = () => {
           "--swiper-pagination-color": "#fff",
         }}
         speed={600}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         parallax={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[Autoplay, Parallax, Pagination, Navigation]}
         className="mySwiper w-full h-[200px] md:h-[300px] lg:h-[500px] "
       >
         <div

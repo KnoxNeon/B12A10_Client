@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 const Cards = () => {
   return (
     <div>
-        <h1 className='mt-4 lg:mt-20 mb-2 text-2xl md:text-5xl font-bold text-center text-sky-500'>Categories</h1>
+        <h1 className='mt-4 md:mt-8  lg:mt-20 mb-2 text-2xl md:text-4xl lg:text-5xl font-bold text-center text-sky-500'>Categories</h1>
     <div className='grid grid-cols-2 md:grid-cols-4 md:py-10 lg:gap-20 gap-4 lg:w-[1600px] mx-auto'>
       <motion.div
         initial={{ scale: 0.5 }}

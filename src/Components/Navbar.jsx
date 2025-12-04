@@ -6,7 +6,7 @@ const Navbar = () => {
   
   return (
     <div>
-      <div className="navbar z-10 bg-sky-700 text-white font-normal border-t border-white/10 w-full text-grey shadow-sm">
+      <div className="navbar z-10 bg-linear-to-r from-sky-900 to-sky-600/70 text-white font-normal border-t border-white/10 w-full text-grey shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,8 +58,8 @@ const Navbar = () => {
         <div className="navbar-end ">
           
             <div className='flex gap-2'>
-              <Link to="/profile"><img className='w-10 h-10 rounded-4xl border-2 border-sky-900 hover:scale-110'  alt="" /></Link>
-              <button  className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 bg-sky-900 text-white "> Logout</button>
+              <Link to="/profile"><img className='w-10 h-10 rounded-4xl border-2 border-sky-700 hover:scale-110'  alt="" /></Link>
+              <button  className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 bg-sky-700 text-white "> Logout</button>
             </div>
         
         </div>
