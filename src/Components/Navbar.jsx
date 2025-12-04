@@ -52,16 +52,33 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          {user && (<ul className="menu menu-horizontal px-1">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/games">Pets & Supplies</Link>
             </li>
-        
-            
-          </ul>
+            <li>
+              <Link to="/games">Add Listings</Link>
+            </li>
+            <li>
+              <Link to="/games">My Listings</Link>
+            </li>
+            <li>
+              <Link to="/games">My Orders</Link>
+            </li>
+          </ul>)}
+
+          {!user && (<ul className="menu menu-horizontal px-1">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/games">Pets & Supplies</Link>
+            </li>
+          </ul>)}
+          
         </div>
 
         <div className="navbar-end ">

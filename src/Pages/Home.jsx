@@ -5,6 +5,7 @@ import Cards from '../Components/Cards'
 const Home = () => {
   return (
     <div>
+      <title>Home</title>
       <Slider/>
       <Cards/>
     </div>
