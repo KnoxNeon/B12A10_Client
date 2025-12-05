@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
            element: <PetSupplies/> 
         },
         {
-           path: "/details/:id", 
+           path: "/details/:myId", 
            element: <PrivateRoute><ServiceDetails/> </PrivateRoute>
         },
       

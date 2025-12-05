@@ -11,13 +11,13 @@ const Footer = () => {
   </aside>
  
   <nav>
-    <h6 className="footer-title text-yellow-200">Legal</h6>
+    <h6 className="footer-title text-yellow-400">Legal</h6>
     <a className="link link-hover">Terms of use</a>
     <a className="link link-hover">Privacy policy</a>
     <a className="link link-hover">Cookie policy</a>
   </nav>
    <nav>
-    <h6 className="footer-title text-yellow-200">Social</h6>
+    <h6 className="footer-title text-yellow-400">Social</h6>
     <div className="grid grid-flow-col gap-4">
       <a>
         <FaXTwitter className="w-6 h-6" />
