@@ -4,21 +4,19 @@ import { useEffect, useState } from "react";
 
 
 const ServiceDetails = () => {
-    const [service, setService ]  = useState(null);
-     const { myId } = useParams();
-     const [loading, setLoading] = useState(true)
-   
-    
+    const [service, setService] = useState(null);
+    const { myId } = useParams();
+    const [loading, setLoading] = useState(true);
 
-    useEffect(()=>{
-        fetch(`http://localhost:3000/services/${myId}`)
-        .then(res => res.json())
-        .then(data =>{
-            setService(data)
-            setLoading(false)
+    useEffect(() => {
+      fetch(`http://localhost:3000/services/${myId}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setService(data);
+          setLoading(false);
         })
-        .catch(err => console.log(err))
-    },[myId])
+        .catch((err) => console.log(err));
+    }, [myId]);
 
   
 

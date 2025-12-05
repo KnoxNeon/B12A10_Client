@@ -8,6 +8,7 @@ import PetSupplies from "../Pages/PetSupplies";
 import ServiceDetails from "../Pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
 import MyServices from "../Pages/MyServices";
+import UpdateServices from "../Pages/UpdateServices";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
         {
            path: "/my-services", 
            element: <PrivateRoute><MyServices/> </PrivateRoute>
+        },
+        {
+           path: "/update-services/:id", 
+           element: <PrivateRoute><UpdateServices/> </PrivateRoute>
         },
       
     ],

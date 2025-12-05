@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../Provider/AuthProvider'
 import { MapPin } from 'lucide-react'
+import { Link } from 'react-router';
 
 const MyServices = () => {
   const [myServices, setMyServices] = useState([]);
@@ -63,7 +64,7 @@ const MyServices = () => {
                 <button className="btn btn-ghost btn-xs">{service.date}</button>
               </td>
               <td>
-                <button className="btn bg-red-500 btn-xs">Edit</button>
+                <Link to={`/update-services/${service._id}`} className="btn bg-red-500 btn-xs">Edit</Link>
                 <button className="btn bg-green-500 btn-xs">Delete</button>
               </td>
             </tr>
