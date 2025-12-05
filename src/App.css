@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@media (max-width: 640px) {
+  .table td,
+  .table th {
+    display: block;
+  }
+  .table thead {
+    display: none;
+  }
+}
