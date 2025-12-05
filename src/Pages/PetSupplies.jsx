@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 const PetSupplies = () => {
     const {services, loading, error} = useServices()
   return (
-    <motion.div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 lg:my-10 m-6 lg:mx-20'>
+    <motion.div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-60 lg:my-10 m-6 lg:mx-20'>
       <title>Pets & Supplies</title>
       {
             services.map(service => (

@@ -5,6 +5,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AddService from "../Pages/AddService";
 import PetSupplies from "../Pages/PetSupplies";
+import ServiceDetails from "../Pages/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -30,8 +32,11 @@ export const router = createBrowserRouter([
         {
            path: "/services", 
            element: <PetSupplies/> 
-        }
-       
+        },
+        {
+           path: "/details/:id", 
+           element: <PrivateRoute><ServiceDetails/> </PrivateRoute>
+        },
       
     ],
   },
