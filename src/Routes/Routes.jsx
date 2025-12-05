@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AddService from "../Pages/AddService";
+import PetSupplies from "../Pages/PetSupplies";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
         {
            path: "/add-services", 
            element: <AddService/> 
+        },
+        {
+           path: "/services", 
+           element: <PetSupplies/> 
         }
        
       

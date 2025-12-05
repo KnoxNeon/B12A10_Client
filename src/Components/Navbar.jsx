@@ -35,17 +35,7 @@ const Navbar = () => {
                 />{" "}
               </svg>
             </div>
-            <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-               <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/games">Pets & Supplies</Link>
-            </li>
-            </ul>
+            
           </div>
           <NavLink className="flex lg:pl-4">
             <img className="h-16 w-16 hover:scale-120"  src="./logologo.png" alt="" />
@@ -57,10 +47,10 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/games">Pets & Supplies</Link>
+              <Link to="/services">Pets & Supplies</Link>
             </li>
             <li>
-              <Link to="/games">Add Listings</Link>
+              <Link to="/add-services">Add Listings</Link>
             </li>
             <li>
               <Link to="/games">My Listings</Link>
@@ -75,7 +65,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/games">Pets & Supplies</Link>
+              <Link to="/services">Pets & Supplies</Link>
             </li>
           </ul>)}
           
