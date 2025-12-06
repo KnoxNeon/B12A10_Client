@@ -1,10 +1,8 @@
-
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { signOut } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
-
 
 const Navbar = () => {
   const {user} = useContext(AuthContext)
@@ -12,7 +10,6 @@ const Navbar = () => {
   const handleSignOut = () =>{
     signOut(auth)
   }
-  
   return (
     <div>
       <div className="navbar z-10 bg-linear-to-r from-sky-900 to-sky-600/70 text-white font-normal border-t border-white/10 w-full text-grey shadow-sm">
@@ -42,33 +39,21 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          {user && (<ul className="menu menu-horizontal px-1">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/services">Pets & Supplies</Link>
-            </li>
-            <li>
-              <Link to="/add-services">Add Listings</Link>
-            </li>
-            <li>
-              <Link to="/my-services">My Listings</Link>
-            </li>
-            <li>
-              <Link to="/games">My Orders</Link>
-            </li>
+
+          {user && 
+          (<ul className="menu menu-horizontal px-1">
+            <li> <Link to="/">Home</Link></li>
+            <li><Link to="/services">Pets & Supplies</Link></li>
+            <li><Link to="/add-services">Add Listings</Link></li>
+            <li><Link to="/my-services">My Listings</Link></li>
+            <li><Link to="/my-orders">My Orders</Link></li>
           </ul>)}
 
-          {!user && (<ul className="menu menu-horizontal px-1">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/services">Pets & Supplies</Link>
-            </li>
+          {!user && 
+          (<ul className="menu menu-horizontal px-1">
+            <li><Link to="/">Home</Link></li>
+            <li> <Link to="/services">Pets & Supplies</Link></li>
           </ul>)}
-          
         </div>
 
         <div className="navbar-end ">
@@ -81,18 +66,8 @@ const Navbar = () => {
 
           {!user && (
             <div className='space-x-2'>
-              <Link
-                to="/login"
-                className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-sky-500"
-              >
-                 Login
-              </Link>
-              <Link
-                to="/register"
-                className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-sky-500"
-              >
-                 Register
-              </Link>
+              <Link to="/login" className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-sky-500">Login</Link>
+              <Link to="/register" className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-sky-500">Register</Link>
             </div>
           )}
         </div>
