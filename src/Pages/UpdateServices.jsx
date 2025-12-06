@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../Provider/AuthProvider';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 import { Calendar, ImagePlus } from 'lucide-react';
 
@@ -11,6 +11,7 @@ const UpdateServices = () => {
 
     const [service, setService] = useState(null);
     const [category, setCategory] = useState(service?.category);
+    const navigation = useNavigate()
     
     useEffect(() => {
         axios.get(`http://localhost:3000/services/${id}`)
@@ -50,6 +51,7 @@ const UpdateServices = () => {
       axios.put(`http://localhost:3000/update/${id}`, formData)
       .then(res =>{
         console.log(res.data)
+        navigation('/my-services')
       }).catch((err) => console.log(err));
     };
 

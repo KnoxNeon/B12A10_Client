@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../Provider/AuthProvider'
 import { MapPin } from 'lucide-react'
 import { Link } from 'react-router';
+import axios from 'axios';
 
 const MyServices = () => {
   const [myServices, setMyServices] = useState([]);
@@ -14,7 +15,15 @@ const MyServices = () => {
       .catch((err) => console.log(err));
   }, [user?.email]);
 
-  console.log(myServices);
+  const handleDelete = (id) =>{
+    axios.delete(`http://localhost:3000/delete/${id}`)
+    .then(res=>{
+      console.log(res.data)
+      const filterData = myServices.filter(service => service._id != id)
+      setMyServices(filterData)
+    })
+    .catch(err => console.log(err))
+  }
 
   return (
     <div className="overflow-x-auto w-full">
@@ -65,7 +74,7 @@ const MyServices = () => {
               </td>
               <td>
                 <Link to={`/update-services/${service._id}`} className="btn bg-red-500 btn-xs">Edit</Link>
-                <button className="btn bg-green-500 btn-xs">Delete</button>
+                <button onClick={()=> handleDelete(service?._id)} className="btn bg-green-500 btn-xs">Delete</button>
               </td>
             </tr>
           ))}
