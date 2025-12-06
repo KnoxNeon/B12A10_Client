@@ -5,16 +5,18 @@ const useServices = () => {
     const [services, setServices] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+     const [category, setCategory] = useState('')
+    
 
      useEffect(()=>{
         setLoading(true)
-        axios('http://localhost:3000/services')
+        axios(`http://localhost:3000/services?category=${category}`)
         .then(data => setServices(data.data))
         .catch(err => setError(err))
         .finally(()=>setLoading(false))
-
-    },[])
-  return {services, loading, error}
+    },[category])
+    
+  return {services, loading, error, category, setCategory}
 }
 
 export default useServices
