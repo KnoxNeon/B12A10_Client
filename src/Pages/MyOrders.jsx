@@ -14,7 +14,6 @@ const MyOrders = () => {
 
     },[])
 
-    console.log(myOrders)
   return (
     <div className="overflow-x-auto">
       <title>My Orders</title>

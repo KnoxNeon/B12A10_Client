@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from "react-simple-typewriter";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -14,7 +15,7 @@ const Slider = () => {
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
         }}
-        speed={600}
+        speed={800}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -42,7 +43,17 @@ const Slider = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute z-10 px-4 lg:px-8 pt-30 lg:py-40 text-white">
-            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Find Your <br /> Furry Friend Today!"</div>
+            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">
+              
+              <Typewriter
+                words={["“Find Your Furry Friend Today!"]}
+                loop={0}
+                typeSpeed={40}
+                deleteSpeed={1}
+                cursor
+                cursorStyle="|"
+              />
+            </div>
           </div>
         </SwiperSlide>
 
@@ -55,7 +66,16 @@ const Slider = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute z-10 px-4 lg:px-8 pt-30 lg:py-40 text-white">
-            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Adopt, Don’t Shop <br /> — Give a Pet a Home.”</div>
+            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">
+              <Typewriter
+                words={["Adopt, Don’t Shop — Give a Pet a Home."]}
+                loop={0}
+                typeSpeed={40}
+                deleteSpeed={1}
+                cursor
+                cursorStyle="|"
+              />
+            </div>
           </div>
         </SwiperSlide>
 
@@ -68,7 +88,16 @@ const Slider = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="absolute z-10 px-4 lg:px-8 pt-30 lg:py-40 text-white">
-            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">“Because Every Pet <br />— Deserves Love and Care.”</div>
+            <div className="title text-xl md:text-3xl lg:text-6xl font-bold">
+              <Typewriter
+                words={["Because Every Pet Deserves Love and Care."]}
+                loop={0}
+                typeSpeed={40}
+                deleteSpeed={1}
+                cursor
+                cursorStyle="|"
+              />
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>

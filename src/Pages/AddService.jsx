@@ -65,9 +65,9 @@ const handleSubmit = (e) =>{
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-lg">
+    <div className="max-w-2xl mx-auto p-6 bg-gray-900 text-white border border-sky-700/40 shadow-2xl rounded-2xl mt-4">
       <title>Add Listing</title>
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">
+      <h2 className="text-2xl font-bold text-sky-400 mb-8">
         List a Pet or Product
       </h2>
 
@@ -76,7 +76,7 @@ const handleSubmit = (e) =>{
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Product/Pet Name <span className="text-red-500">*</span></label>
           <input type="text" name='name' required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
             placeholder="e.g., Max the Golden Retriever or Stainless Steel Food Bowl"/>
         </div>
 
@@ -87,7 +87,7 @@ const handleSubmit = (e) =>{
                                                       setCategory(e.target.value);
                                                       if (e.target.value === "pets") setPrice("");
             }}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
             <option value="pets">Pets</option>
             <option value="food">Food</option>
             <option value="accessories">Accessories</option>
@@ -103,7 +103,7 @@ const handleSubmit = (e) =>{
             <span className="text-red-500">*</span>}
           </label>
           <input type="number" name='price' value={isPet? '0': price} onChange={(e) => setPrice(e.target.value)}
-            placeholder={isPet ? "Free adoption (or leave blank)" : "29.99"} disabled={isPet} required={!isPet} className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition 
+            placeholder={isPet ? "Free adoption (or leave blank)" : "29.99"} disabled={isPet} required={!isPet} className={`w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:border-transparent transition 
               ${isPet? "bg-gray-100 border-gray-300 cursor-not-allowed": "border-gray-300 focus:ring-blue-500"}`}/>
 
           {
@@ -118,21 +118,21 @@ const handleSubmit = (e) =>{
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Location <span className="text-red-500">*</span></label>
           <input type="text"name='location' required placeholder="City, State (e.g., Dhaka, Chittagong)" 
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+          className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
         </div>
 
         {/* Description */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Description <span className="text-red-500">*</span></label>
           <textarea name='description' rows="5" required placeholder="Tell us more about the pet or product..."
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"/>
+            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"/>
         </div>
 
         {/* Image Upload */}
         <div>
           <label className="flex items-center gap-3 text-gray-700 mb-2 text-sm font-medium"><ImagePlus className="w-5 h-5" />PhotoURL</label>
           <input name="photoUrl" type="text" placeholder="https://yourphoto/"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"/>
+            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"/>
         </div>
 
         {/* Pickup/Availability Date */}
@@ -140,7 +140,7 @@ const handleSubmit = (e) =>{
           <label className="block text-sm font-medium text-gray-700 mb-2">Available for Pickup From <span className="text-red-500">*</span></label>
           <div className="relative">
             <input type="date" name='date' onChange={(e) => setPickupDate(e.target.value)} required
-              className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+              className="w-full px-4 py-3 bg-gray-800 text-gray-500 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
             <Calendar className="absolute left-4 top-3.5 h-5 w-5 text-gray-400 pointer-events-none"/>
           </div>
         </div>
@@ -149,7 +149,7 @@ const handleSubmit = (e) =>{
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Contact Email</label>
           <input value={user?.email??''} type="email" name='email' readOnly
-            className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-600 cursor-not-allowed"/>
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-300 rounded-lg text-gray-600 cursor-not-allowed"/>
           <p className="text-xs text-gray-500 mt-1">Buyers will contact you at this email</p>
         </div>
 

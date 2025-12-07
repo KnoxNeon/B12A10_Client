@@ -1,6 +1,8 @@
 import React from 'react'
 import Slider from '../Components/Slider'
 import Cards from '../Components/Cards'
+import RecentList from '../Components/RecentList'
+import Extra from '../Components/Extra'
 
 const Home = () => {
   return (
@@ -8,6 +10,8 @@ const Home = () => {
       <title>Home</title>
       <Slider/>
       <Cards/>
+      <RecentList/>
+      <Extra/>
     </div>
   )
 }

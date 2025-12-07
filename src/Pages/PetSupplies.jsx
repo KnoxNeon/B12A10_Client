@@ -2,7 +2,6 @@ import useServices from '../Hooks/useServices'
 import ServiceCard from '../Components/ServiceCard'
 import { motion } from "motion/react"
 
-
 const PetSupplies = () => {
     const {services, loading, error, category, setCategory} = useServices()
 
