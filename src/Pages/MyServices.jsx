@@ -42,11 +42,11 @@ const MyServices = () => {
       }
     });
     
-
   }
 
   return (
     <div className="overflow-x-auto w-full">
+      <title>My Listings</title>
       <table className="table table-zebra table-xs min-w-max md:pl-20 pt-10 text-center">
         {/* head */}
         <thead>

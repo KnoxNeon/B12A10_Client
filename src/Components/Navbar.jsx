@@ -31,21 +31,46 @@ const Navbar = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                 {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />{" "}
               </svg>
+              {user && (
+              <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-sky-400 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                
+              <li>
+                {" "}
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/services">Pets & Supplies</Link>
+              </li>
+              <li>
+                <Link to="/add-services">Add Listings</Link>
+              </li>
+              <li>
+                <Link to="/my-services">My Listings</Link>
+              </li>
+              <li>
+                <Link to="/my-orders">My Orders</Link>
+              </li>
+              </ul>)}
+
+              {!user && (
+              <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-sky-400 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                
+              <li>
+                {" "}
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/services">Pets & Supplies</Link>
+              </li>
+          
+              </ul>
+            
+          )}
+
             </div>
           </div>
           <NavLink className="flex lg:pl-4 md:gap-4">
@@ -113,7 +138,7 @@ const Navbar = () => {
               </Link>
               <button
                 onClick={handleSignOut}
-                className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 text-white bg-sky-500"
+                className="btn border-0 shadow rounded-3xl gap-1 hover:scale-110 text-white bg-blue-600 hover:bg-blue-700"
               >
                 {" "}
                 Logout
@@ -125,13 +150,13 @@ const Navbar = () => {
             <div className="space-x-2">
               <Link
                 to="/login"
-                className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-sky-500"
+                className="btn border-0 rounded-3xl shadow hover:scale-110 text-white bg-blue-600 hover:bg-blue-700"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-sky-500"
+                className="btn border-0 rounded-3xl shadow  hover:scale-110 text-white bg-blue-600 hover:bg-blue-700"
               >
                 Register
               </Link>

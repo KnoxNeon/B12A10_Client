@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 
 const MyOrders = () => {
+  
     const [myOrders, setmyOrders] = useState([])
 
     useEffect(()=>{
@@ -16,6 +17,7 @@ const MyOrders = () => {
     console.log(myOrders)
   return (
     <div className="overflow-x-auto">
+      <title>My Orders</title>
   <table className="table table-xs">
     <thead>
       <tr>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
 import useServices from '../Hooks/useServices'
 import ServiceCard from '../Components/ServiceCard'
 import { motion } from "motion/react"
 
+
 const PetSupplies = () => {
     const {services, loading, error, category, setCategory} = useServices()
- 
+
   return (
     <>
       <select onChange={(e)=>setCategory(e.target.value)} defaultValue="Select Category" className="select select-info">

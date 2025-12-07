@@ -10,11 +10,14 @@ import PrivateRoute from "./PrivateRoute";
 import MyServices from "../Pages/MyServices";
 import UpdateServices from "../Pages/UpdateServices";
 import MyOrders from "../Pages/MyOrders";
+import Profile from "../Pages/Profile";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement:<ErrorPage/>,
     children: [
         {
            path: "/", 
@@ -36,6 +39,14 @@ export const router = createBrowserRouter([
            path: "/services", 
            element: <PetSupplies/> 
         },
+        {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
         {
            path: "/details/:myId", 
            element: <PrivateRoute><ServiceDetails/> </PrivateRoute>

@@ -12,27 +12,19 @@ const Cards = () => {
         initial={{ scale: 0.5 }}
         animate={{ scale: 1, transition: { duration: 1 } }}
       >
-        <Link
-          to=""
-          className="card image-full lg:w-80 h-25 md:h-60 lg:h-90 shadow-xl rounded-xl overflow-hidden group"
-        >
-          <figure className="absolute inset-0">
-            <img
-              src="https://i.pinimg.com/1200x/b9/df/14/b9df14f3b4741730bdfeb21b52f501b3.jpg"
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+        <Link to="/services?category=pets" className="card image-full lg:w-80 h-25 md:h-60 lg:h-90 shadow-xl rounded-xl overflow-hidden group">
+          <figure className="absolute inset-0"><img src="https://i.pinimg.com/1200x/b9/df/14/b9df14f3b4741730bdfeb21b52f501b3.jpg"alt=""
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
           </figure>
 
           <div className="card-body relative p-0 justify-end">
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent"></div>
             <div className="relative z-10 p-6 space-y-3">
-              <h2 className="card-title md:text-2xl text-white text-center drop-shadow-lg">
-                🐶 Pets (Adoption)
-              </h2>
+              <h2 className="card-title md:text-2xl text-white text-center drop-shadow-lg">🐶 Pets (Adoption)</h2>
             </div>
           </div>
         </Link>
+
       </motion.div>
 
       <motion.div
@@ -40,7 +32,7 @@ const Cards = () => {
         animate={{ scale: 1, transition: { duration: 1 } }}
       >
         <Link
-          to=""
+          to={`/services?category=food`}
           className="card image-full lg:w-80 h-25 md:h-60 lg:h-90 shadow-xl rounded-xl overflow-hidden group"
         >
           <figure className="absolute inset-0">
@@ -67,7 +59,7 @@ const Cards = () => {
         animate={{ scale: 1, transition: { duration: 1 } }}
       >
         <Link
-          to=""
+          to={`/services?category=accessories`}
           className="card image-full lg:w-80 h-25 md:h-60 lg:h-90 shadow-xl rounded-xl overflow-hidden group"
         >
           <figure className="absolute inset-0">
@@ -94,7 +86,7 @@ const Cards = () => {
         animate={{ scale: 1, transition: { duration: 1 } }}
       >
         <Link
-          to=""
+          to={`/services?category=care products`}
           className="card image-full lg:w-80 h-25 md:h-60 lg:h-90 shadow-xl rounded-xl overflow-hidden group"
         >
           <figure className="absolute inset-0">
