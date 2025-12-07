@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { signOut } from 'firebase/auth';
@@ -8,13 +8,18 @@ const Navbar = () => {
   const {user} = useContext(AuthContext)
   const [isChecked, setIsChecked] = useState(true)
 
+  useEffect(()=>{
+    const initialTheme = localStorage.getItem('isChecked')
+    const value = JSON.parse(initialTheme)
+    setIsChecked(value)
+    document.querySelector('html').setAttribute('data-theme', value? 'light':'dark')
+  },[])
+
   const handleTheme = () =>{
-    setIsChecked(!isChecked)
-    if(isChecked){
-      document.querySelector('html').setAttribute('data-theme', 'dark')
-    }else{
-      document.querySelector('html').setAttribute('data-theme', 'light')
-    }
+    const savedTheme = !isChecked
+    setIsChecked(savedTheme)
+    document.querySelector('html').setAttribute('data-theme', savedTheme? 'light':'dark')
+    localStorage.setItem('isChecked', JSON.stringify(savedTheme))
   }
 
   const handleSignOut = () =>{
