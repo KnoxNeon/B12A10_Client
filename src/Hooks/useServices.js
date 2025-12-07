@@ -10,7 +10,7 @@ const useServices = () => {
 
      useEffect(()=>{
         setLoading(true)
-        axios.get(`http://localhost:3000/services?category=${category}`)
+        axios.get(`https://pawmart-eta.vercel.app/services?category=${category}`)
         .then(data => setServices(data.data))
         .catch(err => setError(err))
         .finally(()=>setLoading(false))

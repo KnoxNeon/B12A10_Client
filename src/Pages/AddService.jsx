@@ -37,7 +37,7 @@ const handleSubmit = (e) =>{
     };
 
    
-    axios.post('http://localhost:3000/services', formData)
+    axios.post('https://pawmart-eta.vercel.app/services', formData)
     .then(res=>{
         console.log(res)
         if(res.data.acknowledged){

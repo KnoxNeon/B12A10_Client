@@ -1,16 +1,26 @@
-# React + Vite
+# PawMart – Pet MarketPlace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PawMart** is a modern, responsive web application that allows users to buy, sell, and explore pet items, including pet food, accessories, toys, and more—all in one convenient platform.
 
-Currently, two official plugins are available:
+Live URL: https://pawmart-knox.surge.sh  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Pet Listings: Browse the latest pet products and accessories with clean, detailed listing pages. 
+- Fully responsive design – looks perfect on mobile, tablet, and desktop  
+- Google Sign-In authentication (powered by Firebase)   
+- Buy & Place Orders: Add items to your cart and place orders seamlessly. 
+- Protected Routes: Smooth page load and secure access for logged-in users.    
+- Beautiful UI with better UX 
 
-## Expanding the ESLint configuration
+## Tech Stack & npm Packages Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ 1. `react` + `react-dom` Core framework                           
+ 2. `react-router-dom` Client-side routing & protected routes    
+ 3. `tailwindcss` + `daisyui` + `react-toastify` + `motion` + `swiper` Design and styling                     
+ 4. `lucide-react` + `react-icons` Beautiful icons  
+ 5. `firebase` Google authentication & Firestore         
+ 6. `surge` deployment  
+ 7. `express` custom apis
+ 8. `mongodb` data management
