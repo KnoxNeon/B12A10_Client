@@ -93,45 +93,24 @@ export default function Login() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
-                    <Mail className="w-5 h-5" />
-                    Email Address
-                  </label>
-                  <input
-                    onChange={(e)=> setEmail(e.target.value)}
-                    name='email'
-                    type="email"
-                    placeholder="friend@domain.com"
-                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
-                  />
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium"><Mail className="w-5 h-5" />Email Address</label>
+                  <input onChange={(e)=> setEmail(e.target.value)} name='email' type="email" placeholder="friend@domain.com"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-purple-500/20 transition-all"/>
                 </div>
 
                 <div>
-                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium">
-                    <Lock className="w-5 h-5" />
-                    Password
-                  </label>
-                  <input
-                    name='password'
-                    type="password"
-                    placeholder="••••••••"
-                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-purple-500/20 transition-all"
-                  />
+                  <label className="flex items-center gap-3 text-gray-300 mb-2 text-sm font-medium"><Lock className="w-5 h-5" />Password</label>
+                  <input name='password' type="password" placeholder="••••••••"
+                    className="w-full px-4 py-4 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-purple-500/20 transition-all"/>
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-                  <button href="#" className="text-sky-500 hover:text-white transition-colors">
-                    Forgot password?
-                  </button>
-                  <Link to="/register" className="text-sky-500 hover:text-white transition-colors">
-                    Don't have an account? <span className="font-bold">Register</span>
-                  </Link>
+                  <button href="#" className="text-sky-500 hover:text-white transition-colors">Forgot password?</button>
+                  <Link to="/register" className="text-sky-500 hover:text-white transition-colors">Don't have an account? <span className="font-bold">Register</span></Link>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-4 mt-6 bg-linear-to-r from-sky-700 to-sky-500 hover:bg-sky-900 rounded-xl font-bold text-lg text-white shadow-xl transform transition-all hover:scale-[1.02] active:scale-100"
-                >
+                <button type="submit"
+                  className="w-full py-4 mt-6 bg-linear-to-r from-sky-700 to-sky-500 hover:bg-sky-900 rounded-xl font-bold text-lg text-white shadow-xl transform transition-all hover:scale-[1.02] active:scale-100">
                   Login Now
                 </button>
 
